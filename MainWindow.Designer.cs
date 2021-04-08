@@ -44,14 +44,15 @@ namespace GTATools
             this.antiAfkCheckbox.UseVisualStyleBackColor = true;
             this.antiAfkCheckbox.CheckedChanged += new System.EventHandler(this.antiAfkCheckbox_CheckedChanged);
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 221);
+            this.ClientSize = new System.Drawing.Size(354, 256);
             this.Controls.Add(this.antiAfkCheckbox);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "GTA Tools by Mahjestic";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
