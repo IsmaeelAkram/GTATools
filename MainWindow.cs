@@ -28,7 +28,7 @@ namespace GTATools
                     // TODO: Move mouse
                     Cursor.Position = new Point(Cursor.Position.X + 300, Cursor.Position.Y);
                 }
-                Thread.Sleep(5000);
+                Thread.Sleep(15000);
             }
         }
 
