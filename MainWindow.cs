@@ -8,18 +8,18 @@ namespace GTATools
     public partial class MainWindow : Form
     {
         public static bool antiAfkEnabled = false;
+        Thread antiAfkThread = new Thread(new ThreadStart(antiAfk));
 
         public MainWindow()
         {
             InitializeComponent();
 
             this.Cursor = new Cursor(Cursor.Current.Handle);
-            Thread antiAfkThread = new Thread(new ThreadStart(antiAfk));
             
             antiAfkThread.Start();
         }
 
-        public void antiAfk()
+        public static void antiAfk()
         {
             while (true)
             {
@@ -34,12 +34,17 @@ namespace GTATools
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            antiAfkThread.Abort();
         }
 
         private void antiAfkCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             antiAfkEnabled = antiAfkCheckbox.Checked;
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }
