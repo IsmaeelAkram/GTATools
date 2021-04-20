@@ -30,6 +30,7 @@ namespace GTATools
         private void InitializeComponent()
         {
             this.antiAfkCheckbox = new System.Windows.Forms.CheckBox();
+            this.privateSessionBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // antiAfkCheckbox
@@ -44,12 +45,29 @@ namespace GTATools
             this.antiAfkCheckbox.UseVisualStyleBackColor = true;
             this.antiAfkCheckbox.CheckedChanged += new System.EventHandler(this.antiAfkCheckbox_CheckedChanged);
             // 
+            // privateSessionBtn
+            // 
+            this.privateSessionBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.privateSessionBtn.Font = new System.Drawing.Font("Consolas", 15.75F);
+            this.privateSessionBtn.Location = new System.Drawing.Point(12, 46);
+            this.privateSessionBtn.Name = "privateSessionBtn";
+            this.privateSessionBtn.Size = new System.Drawing.Size(330, 35);
+            this.privateSessionBtn.TabIndex = 1;
+            this.privateSessionBtn.Text = "Make Public-Solo Session";
+            this.privateSessionBtn.UseVisualStyleBackColor = true;
+            this.privateSessionBtn.Click += new System.EventHandler(this.privateSessionBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 256);
+            this.ClientSize = new System.Drawing.Size(354, 98);
+            this.Controls.Add(this.privateSessionBtn);
             this.Controls.Add(this.antiAfkCheckbox);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "GTA Tools by Mahjestic";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
@@ -62,6 +80,7 @@ namespace GTATools
         #endregion
 
         private System.Windows.Forms.CheckBox antiAfkCheckbox;
+        private System.Windows.Forms.Button privateSessionBtn;
     }
 }
 
