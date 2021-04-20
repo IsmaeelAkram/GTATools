@@ -12,4 +12,4 @@ When you check the Anti-AFK checkbox, it moves your cursor 300 pixels to the rig
 
 ### Public Solo Session
 When you press the public solo session button, it kicks you out of your current GTA lobby and puts you into one alone!
-![Screenshot of Public Solo Session Button](https://raw.githubusercontent.com/IsmaeelAkram/GTATools/main/screenshots/antiAfk.png)
+![Screenshot of Public Solo Session Button](https://raw.githubusercontent.com/IsmaeelAkram/GTATools/main/screenshots/soloSession.png)
