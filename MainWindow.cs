@@ -15,7 +15,7 @@ namespace GTATools
         {
             InitializeComponent();
 
-            this.Cursor = new Cursor(Cursor.Current.Handle);
+            // this.Cursor = new Cursor(Cursor.Current.Handle);
             
             antiAfkThread.Start();
             Console.WriteLine("Anti-AFK thread started.");
@@ -28,20 +28,20 @@ namespace GTATools
                 if (antiAfkEnabled)
                 {
                     // TODO: Move mouse
-                    Cursor.Position = new Point(Cursor.Position.X + 300, Cursor.Position.Y);
+                    MouseMovement.Move(-500, 0);
                     Thread.Sleep(1000);
-                    Cursor.Position = new Point(Cursor.Position.X - 300, Cursor.Position.Y);
+                    MouseMovement.Move(500, 0);
                 }
-                Thread.Sleep(3000);
+                Thread.Sleep(10000);
             }
         }
 
         public static void makeSoloSession()
         {
-            var GTAProcesses = Process.GetProcessesByName("GTAV.exe");
+            var GTAProcesses = Process.GetProcessesByName("GTA5");
             var GTAProcess = new Process();
 
-            if(GTAProcesses.Length == 0)
+            if(GTAProcesses.Length <= 0)
             {
                 MessageBox.Show("GTA doesn't appear to be running!");
                 return;
